@@ -41,8 +41,12 @@ class App extends React.Component {
         <header className="App-header">
         <div className='tc ma4 logo'><img alt='logo' src={logo}/></div>
           <InputField attention={this.state.attention} onInput={this.onInput}/>
-          <div className='tc ma3 white'><h3>{this.success}</h3></div>
-            <a className='tc fw6 db white link hover-light-pink' href={shortUrl}><h1>{shortUrl}</h1></a>
+          <div className='tc ma3 white'>
+            <ul>
+              <li style={{listStyle: 'none'}}>Format: https://your/long/url/</li>
+            </ul>
+          </div>
+            <a className='tc fw6 db  link white hover-light-pink' href={shortUrl}><h1>{shortUrl}</h1></a>
           <div className='tc'>
             <button className='btn btn-primary btn-lg ma4' onClick={this.shorten}>Make it Short</button>
           </div>
